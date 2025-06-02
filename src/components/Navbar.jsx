@@ -11,50 +11,34 @@ function Navbar() {
   };
 
   return (
-    <div
-      className="h-[80px] flex justify-between items-center gap-6"
-      role="navigation"
-    >
-      <div className="h-16 cursor-pointer">
-        <a href="/" className="flex items-center gap-0 font-lobster">
-          <img src={logo} alt="UXpert" className="h-16 w-16" />{" "}
-          <span className="text-2xl font-bold text-[#F24E1E] tracking-wider">
-            UX<span className="text-[#1D1D1D] font-montserrat">pert</span>
-          </span>
+    <div className="h-[80px] flex justify-between items-center gap-6 px-4 md:px-8" role="navigation">
+      <div className="cursor-pointer">
+        <a href="/" className="flex items-center">
+          <img src={logo} alt="INvestF Logo" className="h-44 md:h-48 w-auto" />
         </a>
       </div>
 
-      <ul className="flex items-center gap-[36px] text-black font-bold tracking-wide max-[950px]:hidden">
+      <ul className="flex items-center gap-6 md:gap-8 text-gray-800 font-Regular tracking-wide max-[950px]:hidden">
         <li className="hover:text-[#FF734F] hover:cursor-pointer transition-colors duration-300 text-nowrap">
-          <a href="#operations">HOW IT WORKS</a>
+          <a href="/">HOME</a>
+        </li>
+        <li className="hover:text-[#FF734F] hover:cursor-pointer transition-colors duration-300 text-nowrap">
+          <a href="#blog">BLOG</a>
+        </li>
+        <li className="hover:text-[#FF734F] hover:cursor-pointer transition-colors duration-300 text-nowrap">
+          <a href="#trading-tutorial">INVESTMENT 101</a>
         </li>
         <li className="hover:text-[#FF734F] hover:cursor-pointer transition-colors duration-300 text-nowrap">
           <a href="#about">ABOUT</a>
         </li>
         <li className="hover:text-[#FF734F] hover:cursor-pointer transition-colors duration-300 text-nowrap">
-          <a href="#work">WORK</a>
-        </li>
-        <li className="hover:text-[#FF734F] hover:cursor-pointer transition-colors duration-300 text-nowrap">
-          <a href="#pricing">PRICING</a>
-        </li>
-        <li className="hover:text-[#FF734F] hover:cursor-pointer transition-colors duration-300 text-nowrap">
-          <a href="#faq">FAQ&apos;s</a>
+          <a href="#contact">CONTACT</a>
         </li>
       </ul>
 
       <button
         type="button"
-        className="h-11 px-6 text-white text-nowrap font-bold tracking-wider bg-[#F86642] rounded-lg flex items-center hover:bg-[#F6F6F6] hover:text-[#F86642] duration-150 border-2 border-[#E0EAF3] hover:border-[#F86642] active:scale-95 transition-all max-[950px]:hidden"
-      >
-        GET STARTED
-      </button>
-
-      {/* Mobile Nav Humburger Icon */}
-      <button
-        type="button"
-        className={`hamburger hamburger--emphatic ${
-          isNavActive ? "is-active" : ""
-        } min-[950px]:hidden`}
+        className={`hamburger hamburger--emphatic ${isNavActive ? "is-active" : ""} min-[950px]:hidden`}
         onClick={handleNavButtonClick}
       >
         <span className="hamburger-box">
@@ -62,24 +46,23 @@ function Navbar() {
         </span>
       </button>
 
-      {/* Mobile Nav */}
       {isNavActive && (
-        <div className="min-h-[100%] w-full bg-[#E0EAF3] absolute top-[80px] left-0 min-[950px]:hidden">
+        <div className="min-h-screen w-full bg-[#E0EAF3] absolute top-[80px] left-0 min-[950px]:hidden z-50">
           <ul className="flex flex-col items-center gap-8 text-2xl font-bold text-[#1D1D1D] tracking-wider mt-16 pb-20">
             <li className="hover:text-[#FF734F]" onClick={handleNavButtonClick}>
-              <a href="#operations">HOW IT WORKS</a>
+              <a href="/">HOME</a>
+            </li>
+            <li className="hover:text-[#FF734F]" onClick={handleNavButtonClick}>
+              <a href="#blog">BLOG</a>
+            </li>
+            <li className="hover:text-[#FF734F]" onClick={handleNavButtonClick}>
+              <a href="#trading-tutorial">สอนเทรด</a>
             </li>
             <li className="hover:text-[#FF734F]" onClick={handleNavButtonClick}>
               <a href="#about">ABOUT</a>
             </li>
             <li className="hover:text-[#FF734F]" onClick={handleNavButtonClick}>
-              <a href="#work">WORK</a>
-            </li>
-            <li className="hover:text-[#FF734F]" onClick={handleNavButtonClick}>
-              <a href="#pricing">PRICING</a>
-            </li>
-            <li className="hover:text-[#FF734F]" onClick={handleNavButtonClick}>
-              <a href="#faq">FAQ&apos;s</a>
+              <a href="#contact">CONTACT</a>
             </li>
           </ul>
         </div>

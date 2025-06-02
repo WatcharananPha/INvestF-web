@@ -640,7 +640,7 @@
 
 .hamburger--squeeze.is-active .hamburger-inner {
   transform: rotate(45deg);
-  transition-delay: 0.12s;
+  transition-delay: 0.12s;  
   transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1); }
   .hamburger--squeeze.is-active .hamburger-inner::before {
     top: 0;

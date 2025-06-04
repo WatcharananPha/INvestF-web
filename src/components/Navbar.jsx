@@ -9,7 +9,7 @@ function Navbar() {
     document.body.style.overflow = isNavActive ? "auto" : "hidden";
     setIsNavActive(!isNavActive);
   };
-
+  
   return (
     <div className="h-[80px] flex justify-between items-center gap-6 px-4 md:px-8" role="navigation">
       <div className="cursor-pointer">
